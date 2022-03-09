@@ -1,23 +1,23 @@
 package ru.gb.weatherapprebuild.view.details
 
-import android.os.Build
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_details.*
+import okhttp3.*
 import ru.gb.weatherapprebuild.R
 import ru.gb.weatherapprebuild.databinding.FragmentDetailsBinding
 import ru.gb.weatherapprebuild.model.Weather
-import ru.gb.weatherapprebuild.model.WeatherDTO
+import ru.gb.weatherapprebuild.utils.showSnackBar
 import ru.gb.weatherapprebuild.viewmodel.AppState
 import ru.gb.weatherapprebuild.viewmodel.DetailsViewModel
+
 
 const val DETAILS_INTENT_FILTER = "DETAILS INTENT FILTER"
 const val DETAILS_LOAD_RESULT_EXTRA = "LOAD RESULT"
@@ -122,4 +122,4 @@ class DetailsFragment : Fragment(R.layout.main_fragment) {
             return fragment
         }
     }
-}}
+}

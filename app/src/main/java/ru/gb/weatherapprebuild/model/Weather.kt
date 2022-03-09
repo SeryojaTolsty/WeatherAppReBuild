@@ -10,8 +10,6 @@ data class Weather(
     val feelsLike: Int = 0
 ) : Parcelable
 
-annotation class Parcelize
-
 fun getDefaultCity() = City("Москва", 55.75826, 37.6172999000035)
 
 
