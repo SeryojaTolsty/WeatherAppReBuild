@@ -10,6 +10,8 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_details.*
 import ru.gb.weatherapprebuild.R
 import ru.gb.weatherapprebuild.databinding.FragmentDetailsBinding
 import ru.gb.weatherapprebuild.model.Weather

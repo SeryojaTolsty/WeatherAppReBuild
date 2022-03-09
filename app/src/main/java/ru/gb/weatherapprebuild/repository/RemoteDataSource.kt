@@ -7,6 +7,7 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Callback
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import ru.gb.weatherapprebuild.BuildConfig
 import ru.gb.weatherapprebuild.model.WeatherDTO
 import java.io.IOException
