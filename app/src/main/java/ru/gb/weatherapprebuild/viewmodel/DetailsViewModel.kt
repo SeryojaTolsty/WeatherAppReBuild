@@ -9,6 +9,7 @@ import ru.gb.weatherapprebuild.model.WeatherDTO
 import ru.gb.weatherapprebuild.repository.DetailsRepository
 import ru.gb.weatherapprebuild.repository.DetailsRepositoryImpl
 import ru.gb.weatherapprebuild.repository.RemoteDataSource
+import ru.gb.weatherapprebuild.utils.convertDtoToModel
 
 private const val SERVER_ERROR = "Ошибка сервера"
 private const val REQUEST_ERROR = "Ошибка запроса на сервер"
@@ -18,7 +19,6 @@ class DetailsViewModel(
     val detailsLiveData: MutableLiveData<AppState> = MutableLiveData(),
     private val detailsRepositoryImpl: DetailsRepository = DetailsRepositoryImpl(RemoteDataSource())
 ) : ViewModel() {
-
 
     private val callBack = object : Callback<WeatherDTO> {
         override fun onResponse(call: Call<WeatherDTO>, response: Response<WeatherDTO>) {
@@ -46,11 +46,8 @@ class DetailsViewModel(
         }
     }
 
-
-
     fun getWeatherFromRemoteSource(lat: Double, lon: Double) {
         detailsLiveData.value = AppState.Loading
         detailsRepositoryImpl.getWeatherDetailsFromServer(lat, lon, callBack)
     }
-
 }
