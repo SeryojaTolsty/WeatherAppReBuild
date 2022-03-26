@@ -25,7 +25,6 @@ class DetailsService(name: String = "DetailService") : IntentService(name) {
 
     private val broadcastIntent = Intent(DETAILS_INTENT_FILTER)
 
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun onHandleIntent(intent: Intent?) {
         intent?.let {
             val lat = intent.getDoubleExtra(LATITUDE_EXTRA, 0.0)
@@ -82,7 +81,7 @@ class DetailsService(name: String = "DetailService") : IntentService(name) {
     private fun onResponse(weatherDTO: WeatherDTO) {
         val fact = weatherDTO.fact
 
-        fact?.let {
+        fact?.let{
             onSuccessResponse(fact.temp, fact.feels_like, fact.condition)
         } ?: run {
             onEmptyResponse()
@@ -127,4 +126,5 @@ class DetailsService(name: String = "DetailService") : IntentService(name) {
     private fun putLoadResult(result: String) {
         broadcastIntent.putExtra(DETAILS_LOAD_RESULT_EXTRA, result)
     }
+
 }

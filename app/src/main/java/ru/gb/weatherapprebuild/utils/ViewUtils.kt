@@ -3,7 +3,7 @@ package ru.gb.weatherapprebuild.utils
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
 
-fun View.showSnackBar(
+fun View.showSnackBar (
     text: String,
     actionText : String,
     action: (View) -> Unit,

@@ -1,5 +1,6 @@
 package ru.gb.weatherapprebuild.repository
 
+import okhttp3.Callback
 import ru.gb.weatherapprebuild.model.WeatherDTO
 
 interface DetailsRepository {

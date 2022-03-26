@@ -1,6 +1,6 @@
 package ru.gb.weatherapprebuild.model
 
-data class WeatherDTO(
+data class WeatherDTO (
     val fact: FactDTO?
 )
 

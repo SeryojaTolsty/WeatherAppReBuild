@@ -7,11 +7,11 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import kotlinx.android.synthetic.main.fragment_threads.*
 import ru.gb.weatherapprebuild.R
@@ -28,9 +28,9 @@ class ThreadsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var counterThread = 0
-    val handlerThread: HandlerThread? = null
+    val handlerThread : HandlerThread? = null
 
-    private val testReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+    private val testReceiver : BroadcastReceiver = object  : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             intent.getStringExtra(THREADS_FRAGMENT_BROADCAST_EXTRA)?.let {
                 addView(context, it)
