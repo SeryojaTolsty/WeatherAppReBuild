@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!-- интересующая страница -->
+        <!-- Интересующая нас страница -->
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/url"
             android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
             android:inputType="textUri"
             android:text="https://geekbrains.ru/" />
 
-        <!-- поиск страницы -->
+        <!-- Запрос на поиск страницы -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ok"
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:text="ok" />
     </LinearLayout>
 
-    <!-- загружаемая страница -->
+    <!-- Загружаемая страница -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
